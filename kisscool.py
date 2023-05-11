@@ -19,8 +19,9 @@ IPMI_AUTO_FAN_SPEED='ipmitool raw 0x30 0x30 0x01 0x01'
 # TODO: catch ipmitool command not found
 IPMI_BIN=shutil.which('ipmitool')
 
-if sys.argv[1] == "reset":
-    subprocess.run(IPMI_AUTO_FAN_SPEED, check=True, stdout=None, capture_output=True)
+# TODO: revert to auto fan control
+# if sys.argv[1] == "reset":
+#     subprocess.run(IPMI_AUTO_FAN_SPEED, check=True, stdout=None, capture_output=True)
 
 # TODO: REMOTE CONTROL
 # IPMI config for remote control over network
